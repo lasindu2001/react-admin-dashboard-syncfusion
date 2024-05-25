@@ -9,7 +9,7 @@ import { useStateContext } from '../contexts/ContextProvider';
 import product9 from '../data/product9.jpg';
 
 const Ecommerce = () => {
-  const { currentColor } = useStateContext();
+  const { currentColor, currentMode } = useStateContext();
 
   return (
     <div className="mt-24">
@@ -91,11 +91,14 @@ const Ecommerce = () => {
               <div className="mt-10">
                 <Button
                   color="white"
-                  bgColor={currentColor}
+                  bgColor="blue"
                   text="Download Report"
                   borderRadius="10px"
                 />
               </div>
+            </div>
+            <div>
+              <Stacked currentMode={currentMode} width="320px" height="360px" />
             </div>
           </div>
         </div>
